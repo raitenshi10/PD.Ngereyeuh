@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NgereyeuhDao {
@@ -12,5 +13,5 @@ interface NgereyeuhDao {
     suspend fun insertData(ngereyeuhEntity: NgereyeuhEntity)
 
     @Query("SELECT * FROM tb_ngereyeuh ORDER BY id ASC")
-    fun readData(): List<NgereyeuhEntity>
+    fun readData(): Flow<List<NgereyeuhEntity>>
 }

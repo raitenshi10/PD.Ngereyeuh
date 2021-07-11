@@ -3,7 +3,7 @@ package com.example.ngereyeuh.data
 import javax.inject.Inject
 
 class Repository @Inject constructor(
-    local: LocalDataSource
+    localDataSource: LocalDataSource
 ) {
-    val localRepository = local
+    val local = localDataSource
 }
