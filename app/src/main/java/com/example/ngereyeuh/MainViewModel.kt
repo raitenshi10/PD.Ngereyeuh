@@ -8,8 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.ngereyeuh.data.NgereyeuhEntity
 import com.example.ngereyeuh.data.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -26,5 +24,9 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             repository.local.insertData(ngereyeuhEntity)
         }
+    }
+
+    fun searchDatabase(searchQuery: String): LiveData<List<NgereyeuhEntity>> {
+        return repository.local.searchQuery(searchQuery).asLiveData()
     }
 }

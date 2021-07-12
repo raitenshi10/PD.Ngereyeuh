@@ -13,4 +13,8 @@ class LocalDataSource @Inject constructor(
     suspend fun insertData(ngereyeuhEntity: NgereyeuhEntity) {
         ngereyeuhDao.insertData(ngereyeuhEntity)
     }
+
+    fun searchQuery(searchQuery: String): Flow<List<NgereyeuhEntity>> {
+       return ngereyeuhDao.searchQuery(searchQuery)
+    }
 }

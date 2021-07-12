@@ -2,9 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_tambah_kendaraan"
-        android:icon="@drawable/ic_add_kendaraan"
-        android:title="Tambah"
-        app:showAsAction="always"/>
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="Cari"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
 </menu>

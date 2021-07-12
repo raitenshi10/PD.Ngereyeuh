@@ -23,7 +23,10 @@ class NgereyehAdapter : RecyclerView.Adapter<NgereyehAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.tv_nama_pengirim.text = pengirim[position].nama
+        holder.itemView.tv_nama.text = pengirim[position].nama
+        holder.itemView.tv_desaa_pengirim.text = pengirim[position].desa
+        holder.itemView.tv_kecamatan_pengirim.text = pengirim[position].kecamatan
+        holder.itemView.tv_no_kendaraan.text = pengirim[position].noKendaraan
     }
 
     override fun getItemCount(): Int {
