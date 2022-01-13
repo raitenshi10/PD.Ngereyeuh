@@ -4,11 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.ngereyeuh.data.NgereyeuhEntity
+import com.example.ngereyeuh.adapter.NgereyehAdapter
+import com.example.ngereyeuh.ui.TambahDataActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             startActivity(Intent(this, TambahDataActivity::class.java))
         }
     }
-
 
 
     private fun readData() {
@@ -68,6 +67,8 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             viewModel.readData.observe(this, {
                 mAdapter.setData(it)
             })
+        } else {
+            searchData(newText)
         }
         return true
     }

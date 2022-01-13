@@ -1,10 +1,11 @@
-package com.example.ngereyeuh
+package com.example.ngereyeuh.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ngereyeuh.R
 import com.example.ngereyeuh.data.NgereyeuhEntity
 import com.example.ngereyeuh.util.MyDiffUtil
 import kotlinx.android.synthetic.main.pengirim_row.view.*

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:padding="4dp"
-    tools:context=".TambahDataActivity">
+    tools:context=".ui.TambahDataActivity">
 
     <EditText
         android:id="@+id/et_nama_pengirim"
